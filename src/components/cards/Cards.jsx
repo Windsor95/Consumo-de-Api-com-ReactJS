@@ -5,13 +5,13 @@ export default function Cards({ image, name, status, gender, species  }) {
 
    
     return (
-        <StyledCards>
+        <StyledCards status={status} name={name} species={species}>
             <div className="box-img">
                 <img src={image} alt="" />
                 
             </div>
             <div className="box-name">
-                <h3>{name === 'Hole in the Wall Where the Men Can See it All' ? 'Hole in the Wall' : name}</h3>
+                <h3>{name}</h3>
                 <p>{status}</p>
             </div>
             <div className="box-status">

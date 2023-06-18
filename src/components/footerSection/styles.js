@@ -16,6 +16,12 @@ const FooterStyle = Styled.footer`
         }
     }
 
+    .boxBtn {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+    }
+
     button {
         display: flex;  
         align-items: center;
@@ -28,14 +34,16 @@ const FooterStyle = Styled.footer`
         border-radius: 5rem;
         text-transform: uppercase;
         transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+        img {
+            transform: rotate(-90deg);
+            transition: transform 0.3s ease-in-out;
+        }
         &:hover {
             background: #019D08;
             color: #fff;  
             transform: scale(0.95);
             opacity: 0.5;
-            img {
-                transform: rotate(360deg);
-            }
+           
 
         }
 
@@ -43,6 +51,16 @@ const FooterStyle = Styled.footer`
             width: 5rem;
             margin-left: 2rem;
             transition: transform 0.3s ease-in-out;
+        }
+
+        &.arrowPrev {
+            img {
+            margin-right: 2rem;
+            margin-left: 0rem;
+            transform: rotate(90deg);
+            transition: transform 0.3s ease-in-out;
+
+           
         }
 
     }

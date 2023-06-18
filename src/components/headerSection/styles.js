@@ -24,12 +24,17 @@ export const HeaderStyles = Styled.header`
                     border-radius: 5rem;
                     padding: 0.01rem 2rem;
                     color: #019D08;
-
                     transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
-                &:hover {
-                    background: #019D08;
-                    color: #fff; 
-                }
+
+                        &.active {
+                            background: #019D08;
+                            color: #fff;
+                        }
+
+                        &:hover {
+                            background: #019D08;
+                            color: #fff; 
+                        }
                 }
 
             }

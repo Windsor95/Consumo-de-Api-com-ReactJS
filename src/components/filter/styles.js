@@ -5,6 +5,11 @@ import Styled from 'styled-components';
     height: 75rem;
     margin-top: 2.5rem;
    
+    .boxClear {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 1.5rem;
         h2 {
             font-size: 2.4rem;
             font-weight: 800;
@@ -12,6 +17,15 @@ import Styled from 'styled-components';
             color: #ffffff;
             text-align: center;
         }
+
+        img {
+            cursor: pointer;
+            width: 4rem;
+          
+
+        }
+    }
+        
 
    .filters 
    {
@@ -44,7 +58,7 @@ import Styled from 'styled-components';
             line-height: 1.6rem;
             cursor: pointer;
             color: #ffffff;
-            background-color: #1A1D55;
+            background-color:  #1A1D55;
             border-radius: 5rem;
             margin-bottom: 1rem;
             width: 12rem;
@@ -54,6 +68,9 @@ import Styled from 'styled-components';
                 &:hover {
                     background: #019D08;
                     
+                }
+                &.active {
+                    background: #019D08;
                 }
             
         }
