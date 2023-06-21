@@ -1,5 +1,4 @@
-
-import  Styled  from "styled-components";
+import Styled from "styled-components";
 
 export const HeaderStyles = Styled.header`
             display: flex;
@@ -7,36 +6,9 @@ export const HeaderStyles = Styled.header`
             align-items: center;
             color: #fff;
 
-            ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-                li {
-                    width: 17rem;
-                    list-style: none;
-                    font-size: 1.6rem;
-                    font-weight: 800;
-                    text-align: center;
-                    line-height: 2.9rem;
-                    cursor: pointer;
-                    background: #fff;
-                    border-radius: 5rem;
-                    padding: 0.01rem 2rem;
-                    color: #019D08;
-                    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
-
-                        &.active {
-                            background: #019D08;
-                            color: #fff;
-                        }
-
-                        &:hover {
-                            background: #019D08;
-                            color: #fff; 
-                        }
-                }
-
+            img {
+               
+                width: 15rem;
             }
             .search {
                 position: relative;
@@ -69,7 +41,8 @@ export const HeaderStyles = Styled.header`
                     top: 0rem;
                     bottom: 0rem;
                     margin: auto;
-                    padding: 2rem 1.5rem;
+                    width: 8rem;
+                    padding: 2rem 2rem;
                     font-size: 2rem;
                     cursor: pointer;
                     background: #019D08;

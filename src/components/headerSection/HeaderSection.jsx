@@ -1,53 +1,29 @@
-import React, { useState } from 'react';
-import searchIcon from '../../assets/search-icon.svg'
-import { HeaderStyles } from './styles'
+import searchIcon from "../../assets/search-icon.svg";
+import { HeaderStyles } from "./styles";
+import headerImg from "../../assets/Rick-Morty.png";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
- function HeaderSection({ qtd, setSearch }) {
+function HeaderSection({ qtd, setSearch }) {
+  return (
+    <HeaderStyles>
+      <img src={headerImg} alt="" />
+      <div className="search">
+        <img className="search-icon" src={searchIcon} alt="" />
+        <input
+          onChange={(e) => setSearch(e.target.value)}
+          type="text"
+          placeholder="Search..."
+        />
+      </div>
 
-    const [selectCharacter, setSelectCharacter] = useState('')
-
-    const handleSelectCharacter = (item) => {
-        setSelectCharacter(item)
-    }
-    
-    return (
-     
-       <HeaderStyles>
-                <ul>
-                    <li 
-                        onClick={() => handleSelectCharacter('characters')}
-                        className={ selectCharacter === 'characters' ? 'active' : ''}
-                    >
-                    Characters 
-                    </li>
-                    <li
-                        onClick={() => handleSelectCharacter('episodes')}
-                        className={ selectCharacter === 'episodes' ? 'active' : ''}
-                    >Episodes</li>
-                    <li
-                        onClick={() => handleSelectCharacter('locations')}
-                        className={ selectCharacter === 'locations' ? 'active' : ''}
-                    >Locations</li>
-                </ul>
-                <div className='search'>
-                    <img className='search-icon' src={searchIcon} alt="" />
-                    <input 
-                    onChange={(e) => setSearch(e.target.value)}
-                    type="text" placeholder="Search..." 
-                     />  
-                </div>
-           
-                <p>Characters: {qtd}</p>
-        </HeaderStyles>
-       
-    )
+      <p>Characters: {qtd}</p>
+    </HeaderStyles>
+  );
 }
-export default HeaderSection
+export default HeaderSection;
 
 HeaderSection.propTypes = {
-    qtd: PropTypes.number,
-    setSearch: PropTypes.func
-}
-
+  qtd: PropTypes.number,
+  setSearch: PropTypes.func,
+};
